@@ -6,6 +6,22 @@
   --adress-grey-text-: rgba(255, 255, 255, 0.6);
   --logo-black-: rgba(0, 0, 0, 1);
   --background-sectione-color-: rgba(47, 48, 58, 1);
+
+  --portf-button-bgcolor-: rgba(245, 244, 250, 1);
+  --portf-border-: rgba(238, 238, 238, 1);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 body {
@@ -29,6 +45,7 @@ body {
   margin: 0 auto;
 }
 
+/* =====HEADER===== */
 .header .container {
   display: flex;
   align-items: center;
@@ -43,27 +60,19 @@ body {
   display: flex;
 }
 
-.nav-link {
-  padding: 32px 0;
-}
-
 .menu li:not(:last-child) {
   margin-right: 50px;
 }
 
 .logo {
-  padding-top: 24px;
-  padding-bottom: 25px;
-  margin-right: 93px;
-}
-
-.logo,
-.footer-logo {
   font-family: 'Raleway', sans-serif;
   font-size: 26px;
   line-height: 1.2;
 
   color: var(--blue-text-color-);
+  padding-top: 24px;
+  padding-bottom: 25px;
+  margin-right: 93px;
 }
 
 .header-studio {
@@ -77,6 +86,8 @@ body {
   letter-spacing: 0.02em;
   
   color: var(--black-heading-menu-);
+
+  padding: 32px 0;
 }
 
 .nav-link:hover,
@@ -110,8 +121,13 @@ body {
   margin-right: 50px;
 }
 
+/* =====HERO===== */
 .hero {
   background-color: var(--background-sectione-color-);
+
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
@@ -123,17 +139,38 @@ body {
   color: var(--white-color-);
 
   text-transform: uppercase;
+  margin-bottom: 30px;
 }
 
 .hero-button {
+  min-width: 200px;
   font-style: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.06em;
 
+  border-style: none;
   color: var(--white-color-);
   background-color: var(--blue-text-color-);
+  padding: 10px 32px;
+}
+
+/* =====FEATURES===== */
+.feature {
+  padding: 94px 0;
+}
+
+.feature-list {
+  display: flex;
+}
+
+.feature-list-item {
+  width: 270px;
+}
+
+.feature-list li:not(:last-child){
+  margin-right: 30px;
 }
 
 .feature-title {
@@ -143,11 +180,25 @@ body {
   text-transform: uppercase;
 
   color: var(--black-heading-menu-);
+  margin-bottom: 10px;
 }
 
 .feature-text {
   font-size: 14px;
   line-height: 1.7;
+}
+
+/* =====OUR-DOING===== */
+.our-doing {
+  padding-bottom: 94px;
+}
+
+.doing-list {
+  display: flex;
+}
+
+.doing-list li:not(:last-child) {
+  margin-right: 30px;
 }
 
 .section-title {
@@ -156,6 +207,36 @@ body {
   line-height: 1.2;
 
   color: var(--black-heading-menu-);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* =====TEAM===== */
+.team {
+  padding: 94px 0;
+}
+
+.team-list {
+  display: flex;
+}
+
+.team-list li:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team-list-content {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.team-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+
+  color: var(--black-heading-menu-);
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .team-name {
@@ -164,6 +245,7 @@ body {
   line-height: 1.2;
 
   color: var(--black-heading-menu-);
+  margin-bottom: 10px;
 }
 
 .team-position {
@@ -171,12 +253,30 @@ body {
   line-height: 1.2;
 }
 
+/* FOOTER */
 .footer {
   background-color: var(--background-sectione-color-);
+  padding: 60px 0;
 }
 
 .footer-studio {
   color: var(--white-color-);
+}
+
+.footer-logo {
+  font-family: 'Raleway', sans-serif;
+  font-size: 26px;
+  line-height: 1.2;
+
+  color: var(--blue-text-color-);
+}
+
+.footer-logo-container {
+  margin-bottom: 20px;
+}
+
+.footer-list li:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .adress-link {
@@ -195,6 +295,23 @@ body {
   color: var(--adress-grey-text-);
 }
 
+/* =====Portfolio===== */
+
+/* =====WORKS===== */
+.portfolio-section {
+  padding: 94px 0;
+}
+
+.portf-btn-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.portf-btn-list li:not(:last-child) {
+  margin-right: 8px;
+}
+
 .portf-buttons {
   font-family: inherit;
   font-weight: 500;
@@ -203,13 +320,30 @@ body {
   letter-spacing: inherit;
 
   color: var(--black-heading-menu-);
-  background-color: rgba(255, 255, 255, 1);
+  background-color: var(--portf-button-bgcolor-);
+  border-style: none;
+  padding: 6px 22px;
 }
 
 .portf-buttons:hover,
 .portf-buttons:focus {
   color: var(--white-color-);
   background-color: var(--blue-text-color-);
+}
+
+.portf-cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.portf-list-cards-item {
+  outline: 1px solid var(--portf-border-);
+  margin: 15px;
+}
+
+.work-list-card-content {
+  padding: 20px 24px;
 }
 
 .work-title {
@@ -219,6 +353,8 @@ body {
   letter-spacing: 0.06em;
 
   color: var(--black-heading-menu-);
+
+  margin-bottom: 4px;
 }
 
 .work-type {

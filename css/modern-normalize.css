@@ -1,25 +1,13 @@
 /*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
 /* ===== ДОПОЛНЕНИЯ от Sandra Hrevtsova ===== */
-
-/* обнуляем дефолтные маркеры у всех маркированных списков */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+img {
+  display: block;
 }
 
 a {
   text-decoration: none;
 }
-
 
 a,
 button {
@@ -33,6 +21,7 @@ p {
   margin: 0;
 }
 
+/* обнуляем дефолтные маркеры у всех маркированных списков */
 ul {
   list-style: none;
   padding: 0;
